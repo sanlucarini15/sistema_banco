@@ -1,0 +1,140 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hola
+    - hi
+    - que onda
+    - buenos dias
+    - buenas tardes
+    - moin
+    - hey there
+    - vamos
+    - hey dude
+    - goodmorning
+    - goodevening
+    - buenas noches
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - nos vemos
+    - buenas noches
+    - chau
+    - adios
+    - que tengas buen dia
+    - see you around
+    - chau chau
+    - nos vemos luego
+
+- intent: affirm
+  examples: |
+    - si
+    - yes
+    - indeed
+    - obvio
+    - that sounds good
+    - correcto
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - nunca
+    - no creo
+    - don't like that
+    - no hay chance
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfecto
+    - joya
+    - genial
+    - feeling like a king
+    - estupendo
+    - me siento bastante bien
+    - me siento bien
+    - me siento genial
+    - voy a salvar el mundo
+    - super stoked
+    - extremadamente bien
+    - so so perfect
+    - muy bien
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - mi dia fue horrible
+    - estoy triste
+    - no me siento bien
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - triste
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - sos un bot?
+    - sos un humano?
+    - le estoy hablando a un bot?
+    - le estoy hablando a un humano?
+
+- intent: solicitar_cuenta
+  examples: |
+    - Deseo crear una cuenta
+    - Quiero una cuenta
+    - Crear cuenta de banco
+    - Me gustaria crear una cuenta
+    - Desearia registrarme en el banco
+
+- intent: mi_DNI
+  examples: |
+    - mi DNI es [44169711](DNI)
+    - [29141302] es mi DNI
+    - [5633019](DNI)
+
+- intent: mi_nombre
+  examples: |
+    - mi nombre es [santino](nombre)
+    - [pablo](nombre) es mi nombre
+    - la gente me llama [agustin](nombre)
+    - [ricardo](nombre)
+
+- intent: mi_apellido
+  examples: |
+    - mi apellido es [lucarini](apellido)
+    - [messi](apellido) es mi apellido
+    - la gente me conoce como [perez](apellido)
+    - [hernandez](apellido)
+
+- intent: mi_pais
+  examples: |
+    - vivo en [argentina](pais)
+    - [rusia](pais) es mi pais
+    - resido en [paraguay](pais)
+    - [hungria](pais)
+
+- intent: solicitar_tarjeta
+  examples: |
+    - deseo sacar una tarjeta de credito
+    - como obtengo una tarjeta?
+    - me gustaria tener una tarjeta
+    - tarjeta de credito
+    - quiero una tarjeta
+    - dame una tarjeta
+
+- intent: ingresar_tipo_tarjeta
+  examples: |
+    - [debito](tipo_tarjeta)
+    - [credito](tipo_tarjeta)

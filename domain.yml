@@ -1,0 +1,65 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - solicitar_cuenta
+  - solicitar_tarjeta
+  - mi_nombre
+  - mi_apellido
+  - mi_pais
+
+entities:
+  - DNI
+  - nombre
+  - apellido
+  - pais
+  - tipo_tarjeta
+
+actions:
+  - action_tipo_tarjeta
+
+responses:
+  utter_greet:
+  - text: "Hola! Como estas?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Eso te ayudo?"
+
+  utter_happy:
+  - text: "Genial, segui asi!"
+
+  utter_goodbye:
+  - text: "Adios"
+
+  utter_iamabot:
+  - text: "Soy un bot, programado con Rasa."
+
+  utter_tarjeta:
+  - text: "Perfecto, usted posee una cuenta en el banco? (rta=si). Tarjeta de credito o debito?"
+
+  utter_nombre:
+  - text: "Bien, a continuacion complete unos datos. Ingrese su nombre: "
+
+  utter_apellido:
+  - text: "Ingrese su apellido:"
+
+  utter_pais:
+  - text: "Ingrese el pais:"
+
+  utter_confirmacion_cuenta:
+  - text: "Perfecto Sr. Santino Lucarini, su cuenta se creo exitosamente." # "Perfecto Sr/Sra [Santino](nombre) [Lucarini](apellido) ..."
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

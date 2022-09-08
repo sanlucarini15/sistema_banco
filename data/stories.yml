@@ -1,0 +1,56 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: crear cuenta
+  steps:
+  - intent: solicitar_cuenta
+  # - action: action_DNI //Revisa si el DNI existe o no => si ya existe informamos que hay una cuenta asociada con ese DNI, sino continuamos
+  - action: utter_nombre
+  - intent: mi_nombre
+    entities:
+    - nombre: "santino"
+  - action: utter_apellido
+  - intent: mi_apellido
+    entities:
+    - apellido: "lucarini"
+  - action: utter_pais
+  - intent: mi_pais
+    entities:
+    - pais: "argentina"
+  - action: utter_confirmacion_cuenta
+
+- story: solicitar tarjeta
+  steps:
+  - intent: solicitar_tarjeta
+  - action: utter_tarjeta
+  - intent: ingresar_tipo_tarjeta
+  - action: action_tipo_tarjeta
+
